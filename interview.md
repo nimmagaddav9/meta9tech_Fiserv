@@ -133,45 +133,211 @@ This keeps the app organized, supports parallel development, and simplifies onbo
 
 ## 7. How are you using React and TypeScript together in this project?
 
-_(Your custom response here.)_
+# Using React and TypeScript Together in the Project
 
----
+In this project, React and TypeScript are tightly integrated to build a modular, scalable, and type-safe frontend application. TypeScript enhances React development by providing static typing, which helps catch errors early during development and improves code maintainability.
+
+## Key Aspects:
+
+- **Component Development:**  
+  React components are written as TypeScript functional components, with explicit typing for props and state to ensure correctness and improve developer experience with better autocompletion and documentation.
+
+- **State Management:**  
+  We leverage React hooks (like `useState`, `useReducer`) along with Zustand for global state management, all typed with TypeScript interfaces and types to maintain consistency across the app.
+
+- **GraphQL Integration:**  
+  Apollo Client is used for data fetching, and we use generated TypeScript types from GraphQL schemas to ensure type-safe queries and mutations.
+
+- **Tooling & Best Practices:**  
+  Using TypeScript with React allows us to apply strict linting rules, enhance refactoring safety, and implement robust testing with tools like Vitest and React Testing Library.
+
+This combination results in a more reliable, maintainable codebase and a smoother collaboration experience across the team.
 
 ## 8. How are you managing state across complex features?
 
-_(Your custom response here.)_
+# Managing State Across Complex Features
 
----
+For managing state in complex features, we use a combination of React hooks and a lightweight global state management library called **Zustand**:
+
+- **Local State:**  
+  We utilize React's built-in hooks like `useState` and `useReducer` for managing component-level or feature-specific state. This keeps state management simple and encapsulated where possible.
+
+- **Global State:**  
+  For application-wide or shared state, Zustand provides an intuitive and performant solution. It allows us to create centralized stores with minimal boilerplate, supports easy state updates, and integrates seamlessly with React.
+
+- **Type Safety:**  
+  All state slices and actions are strongly typed using TypeScript interfaces and types, ensuring consistency and catching errors during development.
+
+- **Performance Optimization:**  
+  Zustand’s selective subscription model minimizes unnecessary re-renders, improving the app’s responsiveness and efficiency.
+
+- **Integration with Async Logic:**  
+  We combine Zustand with React hooks to handle asynchronous state changes, such as API calls and real-time updates, keeping the UI in sync with backend data.
+
+This hybrid approach balances simplicity and scalability, making it easier to manage complex state logic while maintaining readability and performance.
 
 ## 9. Can you explain how you're using Redux Toolkit and Reselect in your project?
 
-_(Your custom response here.)_
+# Using Redux Toolkit and Reselect in the Project
 
----
+In our project, **Redux Toolkit** and **Reselect** are used together to efficiently manage and optimize application state:
+
+- **Redux Toolkit:**  
+  We use Redux Toolkit to simplify Redux setup and reduce boilerplate. It provides powerful utilities like `createSlice` for defining reducers and actions together, and `createAsyncThunk` for handling asynchronous logic such as API calls. This results in cleaner, more maintainable code with standardized patterns.
+
+- **State Management:**  
+  Redux Toolkit manages the global application state that needs to be shared across multiple components or features, especially complex or deeply nested data structures.
+
+- **Reselect:**  
+  Reselect is used to create memoized selectors that efficiently compute derived data from the Redux state. These selectors prevent unnecessary recalculations and component re-renders by caching previous results unless the relevant slice of state changes.
+
+- **Performance Optimization:**  
+  By combining Redux Toolkit’s simplified state management with Reselect’s memoization, the app achieves better performance and responsiveness, especially in large-scale or data-intensive features.
+
+- **Type Safety:**  
+  Both tools are integrated with TypeScript to ensure strong typing for actions, state, and selectors, enhancing code reliability and developer experience.
+
+This combination enables scalable and performant state management, making the application easier to maintain and extend.
 
 ## 10. How are you handling real-time updates in the dashboard?
 
-_(Your custom response here.)_
+# Handling Real-Time Updates in the Dashboard
 
----
+To manage real-time updates in the dashboard, we implement the following approach:
+
+- **WebSocket Integration:**  
+  We use WebSockets to establish a persistent connection between the client and server, enabling the dashboard to receive live data updates instantly without polling.
+
+- **State Synchronization:**  
+  Incoming real-time data from the WebSocket is dispatched to the frontend state management layer (using Redux Toolkit or Zustand), ensuring that the UI reflects the latest information.
+
+- **Efficient Rendering:**  
+  We optimize component rendering by leveraging React’s memoization techniques (`React.memo`, `useMemo`) and selective state subscriptions to update only the affected parts of the dashboard, reducing unnecessary re-renders.
+
+- **Error Handling and Reconnection:**  
+  The WebSocket connection includes logic to handle disconnections and automatic reconnection attempts, maintaining a stable real-time experience.
+
+- **Data Throttling/Debouncing:**  
+  To prevent UI overload during bursts of updates, we implement throttling or debouncing mechanisms, smoothing out rapid incoming data streams.
+
+- **Testing & Monitoring:**  
+  We write tests to simulate real-time data flows and monitor connection stability and performance using tools like Sentry.
+
+This setup ensures the dashboard remains responsive and up-to-date with minimal latency.
 
 ## 11. What role does RxJS play in your frontend architecture?
 
-_(Your custom response here.)_
+# What Role Does RxJS Play in Your Frontend Architecture?
 
----
+RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using Observables. In frontend architecture, RxJS plays a key role by:
+
+- **Managing Asynchronous Data Streams**  
+  It allows handling multiple async events like user inputs, HTTP requests, WebSocket messages, timers, etc., as streams of data that can be combined, filtered, and transformed declaratively.
+
+- **Simplifying Complex Event Handling**  
+  RxJS provides operators to compose complex event sequences easily, which reduces callback hell and improves code readability.
+
+- **Enabling Reactive State Management**  
+  Observables can represent state streams, enabling reactive UI updates when the state changes.
+
+- **Enhancing Real-Time Features**  
+  RxJS excels at handling real-time data like live search, notifications, and real-time dashboards by efficiently managing streams and updates.
+
+- **Improving Error Handling and Cancellation**  
+  It provides mechanisms for robust error handling and supports cancelling ongoing async operations, improving resource management.
+
+- **Integration with Frameworks**  
+  RxJS is tightly integrated with Angular and can also be used with React or other frameworks to handle side effects and async flows.
+
+Overall, RxJS brings a declarative, composable, and scalable approach to handling asynchronous behavior and event-driven programming in frontend apps.
 
 ## 12. How are REST APIs integrated in your application?
 
-_(Your custom response here.)_
+# How Are REST APIs Integrated in Your Application?
 
----
+REST APIs are integrated into the frontend application to enable communication with backend services and perform CRUD operations. The typical integration approach includes:
+
+- **HTTP Client Usage**  
+  Use libraries like `fetch`, `axios`, or Angular’s `HttpClient` to make HTTP requests (GET, POST, PUT, DELETE) to REST endpoints.
+
+- **Service Layer Abstraction**  
+  Encapsulate API calls within dedicated service classes or modules to separate concerns and promote reusability.
+
+- **Handling Async Data**  
+  Use Promises or Observables (with RxJS) to handle asynchronous responses and update UI accordingly.
+
+- **Error Handling**  
+  Implement centralized error handling to manage API errors, retries, and user notifications gracefully.
+
+- **Request Configuration**  
+  Configure headers, authentication tokens (e.g., JWT), query parameters, and request bodies as needed for secure and correct API calls.
+
+- **State Management Integration**  
+  Sync API data with state management tools (Redux, NgRx, etc.) to keep the UI state consistent with backend data.
+
+- **Caching and Performance Optimization**  
+  Use caching strategies or libraries (e.g., SWR, React Query) to optimize network usage and improve responsiveness.
+
+- **Security Considerations**  
+  Protect API calls with proper authentication and authorization mechanisms, and sanitize inputs to prevent security issues.
+
+This structured integration ensures scalable, maintainable, and efficient communication between the frontend and backend systems.
 
 ## 13. Can you explain your use of Axios and interceptors for secure communication?
 
-_(Your custom response here.)_
+# Use of Axios and Interceptors for Secure Communication
 
----
+Axios is a popular HTTP client used to make API requests in frontend applications. Interceptors in Axios allow you to globally handle requests and responses, enabling secure and consistent communication with backend services.
+
+## How Axios and Interceptors Are Used:
+
+- **Request Interceptors**
+
+  - Automatically attach security tokens (e.g., JWT access tokens) to request headers (usually in the `Authorization` header).
+  - Add common headers like `Content-Type` or custom headers required by the API.
+  - Log or modify requests before they are sent.
+
+- **Response Interceptors**
+  - Handle global error responses such as unauthorized (401) or forbidden (403) status codes.
+  - Refresh tokens automatically when expired, by intercepting 401 errors and retrying the failed request after obtaining a new token.
+  - Centralize error logging and user notifications.
+  - Parse and normalize response data if needed.
+
+## Benefits for Secure Communication
+
+- **Consistent Authentication**  
+  Tokens are securely appended to every request without manual handling in individual API calls.
+
+- **Improved Error Handling**  
+  Centralizes handling of security-related errors and reduces duplication.
+
+- **Token Refresh Management**  
+  Ensures smooth user experience by automatically refreshing expired tokens and retrying failed requests.
+
+- **Maintainability**  
+  Keeps API communication logic clean and separated from business logic.
+
+## Example Snippet
+
+````javascript
+axios.interceptors.request.use(config => {
+  const token = getAuthToken();
+  if (token) {
+    config.headers['Authorization'] = `Bearer ${token}`;
+  }
+  return config;
+});
+
+axios.interceptors.response.use(
+  response => response,
+  async error => {
+    if (error.response.status === 401) {
+      // Handle token refresh logic here
+    }
+    return Promise.reject(error);
+  }
+);
+
 
 ## 14. What are the advantages of using TypeScript in large-scale projects?
 
@@ -199,12 +365,12 @@ No, TypeScript performs **compile-time** checks only. For runtime validation, ex
 
 ## 17. What is Type Casting?
 
-Type casting in TypeScript explicitly tells the compiler to treat a value as a specific type.  
+Type casting in TypeScript explicitly tells the compiler to treat a value as a specific type.
 Useful when TypeScript cannot infer the type — e.g.:
 
 ```ts
 (ref.current as HTMLInputElement).focus();
-```
+````
 
 ## 18. What are Union Types?
 
