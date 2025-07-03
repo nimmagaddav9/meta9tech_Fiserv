@@ -5,7 +5,6 @@
 //   give me an output ascending order and prime number or descending order
 // and odd number.
 
-
 const data = [10, 3, 7, 8, 15, 2, 5, 12, 9];
 import React, { useState } from "react";
 
@@ -72,3 +71,11 @@ const NumberFilterSort = () => {
 };
 
 export default NumberFilterSort;
+
+//output
+// | Filter | Order      | Output         |
+// | ------ | ---------- | -------------- |
+// | Prime  | Ascending  | 2, 3, 5, 7     |
+// | Prime  | Descending | 7, 5, 3, 2     |
+// | Odd    | Descending | 15, 9, 7, 5, 3 |
+// | Even   | Ascending  | 8, 10, 12      |
