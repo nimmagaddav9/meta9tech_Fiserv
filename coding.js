@@ -5,12 +5,12 @@
 //   give me an output ascending order and prime number or descending order
 // and odd number.
 
-const data = [10, 3, 7, 8, 15, 2, 5, 12, 9];
 import React, { useState } from "react";
-
+//user input
+const data = [10, 3, 7, 8, 15, 2, 5, 12, 9];
 // Utility functions
 const isPrime = (num) => {
-  if (num < 2) return false;
+  if (num < 2) return false; //prime number
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
@@ -34,7 +34,7 @@ const sortNumbers = (numbers, order) => {
   return [...numbers].sort((a, b) => (order === "asc" ? a - b : b - a));
 };
 
-const NumberFilterSort = () => {
+const App = () => {
   const [order, setOrder] = useState("asc");
   const [filter, setFilter] = useState("prime");
 
@@ -70,7 +70,7 @@ const NumberFilterSort = () => {
   );
 };
 
-export default NumberFilterSort;
+export default App;
 
 //output
 // | Filter | Order      | Output         |
