@@ -518,9 +518,38 @@ Yes. At VISA, I worked on **payment-related modules** as a UI developer:
 
 ## Q4. Team Working Process
 
-- **Daily Stand-up (15 min):** Yesterday’s work, today’s plan, blockers.
-- If blockers arise (e.g., chat button integration issues), they are escalated to the backend.
-- Work on **Dev & Staging environments** typically from **9 AM to 9 PM EST**.
+## Meetings Attended as a UI Developer
+
+- **Daily Stand-up (15 min):**  
+  Share yesterday’s work, today’s plan, and discuss any blockers.
+
+  - Example: If blockers arise (e.g., chat button integration issues), they are escalated to the backend team.
+
+- Work on **Dev & Staging environments**, typically between **9 AM to 9 PM EST**.
+
+- **Sprint Planning:**  
+  Estimate and break down UI tasks for the upcoming sprint.
+
+- **Backlog Refinement:**  
+  Review and clarify upcoming work and story details with the team.
+
+- **Sprint Demos:**  
+  Showcase completed UI features to stakeholders and gather feedback.
+
+- **Sprint Retrospectives:**  
+  Share feedback on what went well, what didn’t, and suggest improvements.
+
+- **Design/UX Meetings:**  
+  Align with designers on UI specifications and provide feasibility input.
+
+- **Bug Triage Calls:**  
+  Collaborate with QA and backend to prioritize and resolve bugs.
+
+- **Tech Syncs:**  
+  Discuss architectural decisions, reusable components, and coding standards with the dev team.
+
+- **Release Planning:**  
+  Coordinate deployments and ensure the UI code is production-ready.
 
 ---
 
