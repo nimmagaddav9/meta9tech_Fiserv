@@ -308,25 +308,25 @@ Axios is a popular HTTP client used to make API requests in frontend application
 
 ## Example Snippet
 
-````javascript
-axios.interceptors.request.use(config => {
+```javascript
+axios.interceptors.request.use((config) => {
   const token = getAuthToken();
   if (token) {
-    config.headers['Authorization'] = `Bearer ${token}`;
+    config.headers["Authorization"] = `Bearer ${token}`;
   }
   return config;
 });
 
 axios.interceptors.response.use(
-  response => response,
-  async error => {
+  (response) => response,
+  async (error) => {
     if (error.response.status === 401) {
       // Handle token refresh logic here
     }
     return Promise.reject(error);
   }
 );
-
+```
 
 ## 14. What are the advantages of using TypeScript in large-scale projects?
 
@@ -356,10 +356,6 @@ No, TypeScript performs **compile-time** checks only. For runtime validation, ex
 
 Type casting in TypeScript explicitly tells the compiler to treat a value as a specific type.
 Useful when TypeScript cannot infer the type — e.g.:
-
-```ts
-(ref.current as HTMLInputElement).focus();
-````
 
 ## 18. What are Union Types?
 
