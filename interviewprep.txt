@@ -1,0 +1,140 @@
+Q1. 1st resume United Airlines, Visa, Capital Group? role?
+
+I am a core UI Developer with 10+ years of experience building .com websites for different organizations using HTML5, CSS3, JavaScript, React.js, and Redux. 
+In the past 2 years, I worked on the React migration team, where I converted the .net pages to react on united.com. 
+Frontend is React, and used ATMOS (Own library) components used company wide.
+
+Worked on Security features for users where they can manage there account like Forgot password, Forgot MileagePlus number, security questions, Sign-in features, Miles-Pooling, United Club pass,  Recent Activity, dashboard updates and KTN(Known Traveler Number), Accessibility guidelines features on united.com.
+
+used middleware such as redux-saga to handle asynchronous tasks such as API calls, data fetching, and impure actions in a more organized and efficient way.
+
+The new initiative worked on Miles-Pooling( points you get after traveling), TSA Precheck, Account security and management features, and Under18.
+
+Previously worked with Accelerator team for Visa Inc. remediation of MBDA modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring billing, Virtual Terminal, etc for bank users like Wells Fargo,  Bank of America, etc
+
+Capital Group worked on DAVIS Project. Davis stands for Data visualization where we build different highcharts using react and integrate into the AEM., the backend is Java. Previously I worked on Creative Workbench, a writing tool where articles are published on capital group websites.
+
+At Cerner Corporation worked on the medical examination forms.
+
+In Office Depot worked on black Friday reporting.
+
+Satinos Technologies created a tax portal and a schoomin website for the Vignan schools.
+
+
+
+Q2. You worked at VISA — did you work on payment-related features?
+
+Yes, at VISA I worked on payment-related modules as part of the UI team. 
+I was involved in building secure and user-friendly interfaces for transaction workflows, including payment initiation, confirmation, and activity history. 
+I closely collaborated with backend teams to integrate REST APIs securely using Axios with interceptors, ensured form validations, and followed PCI compliance and 
+accessibility standards. We also handled real-time status updates, token-based authentication, and error handling for failed transactions. 
+My focus was on building reusable React components with TypeScript, improving performance, and enhancing the user experience across critical payment flows.
+
+
+3. how many people in your team? 14, 3 fe, 3be, 2QA, 1 scrum master, 1 manager, 1 lead, 3 product owners from myTeam
+
+4. how people work process? 
+15 minutes daily-standup, what we did yesterday, today, if there is blocker discuss it end of the meeting. 
+Chat button, integrarted it is not working, backend team asked need to meet pre-conditions. 
+Works on environment dev, staging in particular time 9am -9pm EST.
+
+5. SDLC phases deep in development?
+
+Yes. I’m involved in all phases of the SDLC.
+
+In requirements gathering, I work with BAs to understand features and constraints.
+
+During design, I help define the frontend architecture, API contracts, and component structure.
+
+In the development phase, I write clean, scalable TypeScript code, integrate APIs, and handle validation and state management.
+
+I write unit/integration tests and assist in bug fixing during QA.
+
+For deployment, I collaborate on CI/CD pipelines and validate builds.
+
+In maintenance, I address production issues, monitor logs, and refactor for performance.
+I also actively participate in Agile ceremonies throughout the cycle.
+
+
+6. What are technical challenges faced? 
+Initially worked on Sign-in features where the account gets locked if you answer 2 questions wrong. Then the account is hard locked.
+I need to request a backend developer unlock it. I have created a list of steps needed to unlock and account where it has a bunch of calls within Postman and made it simple.
+
+7. how do you deal with problem ? fix? redux dev tools - chrome extensions
+
+8. help to solve enhance performance issue ?
+
+Memoization with useMemo and useCallback: Use this hooks to memoize values and, reducing unnecessary recalculations.
+Optimizing Renders with React.Fragment: Use it to avoid unnecessary wrapper elements that could cause additional DOM nodes.
+Lazy loading with React.lazy: Use it to load components lazily, reducing the intial bundle size and imporving intial loading performance.
+Code splitting: Employ code splitting to divide your application into smaller chunks that are loaded on demand, improving initial load times.
+Optimizing Images and Assets: Compress and optimize images, use responsive images and leverage lazy loading for images to reduce network and rendering overhead.
+
+9. What approach did you follow to fix things quicker?
+
+To fix issues quickly, I follow a structured approach:
+
+Reproduce the issue consistently and check browser/network logs.
+
+Use tools like React DevTools, Redux DevTools, or console debugging to trace the root cause.
+
+If it’s a backend/API issue, I inspect the network calls and collaborate with the backend team using tools like Postman or Swagger.
+
+I prioritize hotfixes for critical issues and write targeted unit tests to prevent regressions.
+
+For faster debugging, I maintain clean, modular code and use feature flags or error boundaries in React to isolate and fix issues without affecting other parts of the app.
+
+This approach helps me resolve issues efficiently without compromising code quality.
+
+10. TDD?
+
+ I start by writing unit tests for services/components using Jest and Jasmine/Karma (Angular).
+   For API endpoints, I use Supertest for integration testing. I ensure >80% test coverage and focus on writing meaningful tests, including edge cases. For frontend E2E testing,
+   I use Cypress. TDD helps ensure robust and predictable code.
+
+11. VISA website you built?
+
+12. Release Support? I started as a UI Engineer and worked as Scrum Master and Release specialist have done more 35+ releases so far.
+
+13. merchant support technologies? React.js, redux, javascript, typescript
+
+14. Code Reviews: 
+naming convention is checked. 
+Don’t repeat yourself. 
+If we can convert the particular logic functional component into new Hook which can reused. Ex: Use Screensize hook to check desktop, mobile or tablet.
+If the code is company standards or architecture – Containers, components, folder structure has been organized.
+
+
+15. what kinds of tools used for state management?
+redux  used to implement the "state management".
+We have redux thux, redux saga.
+redux saga? Inorder to manipulate the store Actions(request, response).
+Redux thunx is an outdated library.
+Saga is Advanced library.
+
+Redux is a predictable state container for JavaScript applications. It helps to you write applications, run in different environments and easy to test. 
+And simply we called as Redux is a state management tool.
+Components in redux
+Actions -->Input Parameters Ex: Deposit and Withdraw money from ATM
+Store --> Main Server
+Reducers --> Business Logic
+Dispatch --> Request
+Subscribe --> Response
+State --> Store Component Data
+
+============================
+
+coding question:
+
+database design?
+
+application design?
+
+best practices?
+
+how do you design things?
+
+
+
+
+

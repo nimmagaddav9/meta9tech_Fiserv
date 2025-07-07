@@ -455,3 +455,190 @@ The `tsconfig.json` file is the configuration file for a TypeScript project. It 
 - `jsx`: Enables support for JSX (for React projects)
 
 This file ensures consistent compiler behavior across development teams and environments.
+
+# React.js UI Developer Interview Preparation Notes
+
+## Q1. 1st Resume – Roles at United Airlines, Visa, Capital Group
+
+I am a core UI Developer with 10+ years of experience building .com websites using HTML5, CSS3, JavaScript, React.js, and Redux.
+
+### United Airlines
+
+- Worked on the **React migration team**, converting legacy .NET pages to React on **united.com**.
+- Used **ATMOS (in-house component library)** across projects.
+- Focused on account and security-related features:
+  - Forgot password, security questions, sign-in, miles pooling, dashboard updates, KTN (Known Traveler Number).
+- Implemented **accessibility features** following WCAG guidelines.
+- Used **Redux-Saga** to handle asynchronous actions like API calls and data fetching.
+- Key features: **Miles-Pooling**, TSA PreCheck, Under18 support.
+
+### Visa Inc.
+
+- Worked with the **Accelerator team** on **MBDA module remediation**:
+  - Application Management, Account Management, Portfolio Management, Analytics, Recurring Billing, Virtual Terminal.
+- Supported major banks like **Wells Fargo** and **Bank of America**.
+
+### Capital Group
+
+- Worked on the **DAVIS Project** for data visualization using **Highcharts + React**, integrated into **AEM**.
+- Built **Creative Workbench**, a writing tool used to publish articles.
+
+### Other Experience
+
+- **Cerner Corporation** – Medical exam forms.
+- **Office Depot** – Black Friday reporting dashboards.
+- **Satinos Technologies** – Tax portal and school website for **Vignan Schools**.
+
+---
+
+## Q2. Did you work on payment-related features at VISA?
+
+Yes. At VISA, I worked on **payment-related modules** as a UI developer:
+
+- Built secure UIs for **transaction workflows**: payment initiation, confirmation, and history.
+- Integrated APIs using **Axios with interceptors**, followed **PCI compliance** and accessibility standards.
+- Handled **real-time status updates**, **token-based authentication**, and error flows.
+- Developed reusable **React + TypeScript** components.
+- Focused on performance optimizations and UX enhancements.
+
+---
+
+## Q3. Team Size
+
+- Total team: **14 members**
+  - 3 Frontend Developers
+  - 3 Backend Developers
+  - 2 QA
+  - 1 Scrum Master
+  - 1 Manager
+  - 1 Lead
+  - 3 Product Owners
+
+---
+
+## Q4. Team Working Process
+
+- **Daily Stand-up (15 min):** Yesterday’s work, today’s plan, blockers.
+- If blockers arise (e.g., chat button integration issues), they are escalated to the backend.
+- Work on **Dev & Staging environments** typically from **9 AM to 9 PM EST**.
+
+---
+
+## Q5. SDLC Phases (Developer View)
+
+Yes, I’m involved in all SDLC phases:
+
+1. **Requirements Gathering** – Understand feature scope with BAs.
+2. **Design** – Contribute to frontend architecture and API contracts.
+3. **Development** – Build scalable TypeScript code, API integration, validation, and state management.
+4. **Testing** – Write unit/integration tests, fix bugs from QA.
+5. **Deployment** – CI/CD collaboration, build validation.
+6. **Maintenance** – Monitor logs, handle production issues, refactor as needed.
+7. **Agile Participation** – Actively involved in all ceremonies.
+
+---
+
+## Q6. Technical Challenges Faced
+
+- While working on **Sign-in features**, accounts got **locked** after wrong security answers.
+- Initially needed backend dev help to unlock.
+- Created a **Postman workflow** with steps and API calls to self-unlock accounts, simplifying the process.
+
+---
+
+## Q7. How do you deal with and fix problems?
+
+- Use **Redux DevTools**, **Chrome DevTools** to trace issues.
+- Follow structured debugging to **reproduce**, inspect **logs**, and **isolate root causes**.
+
+---
+
+## Q8. How did you enhance performance?
+
+- **useMemo/useCallback** – Memoization to avoid unnecessary recalculations.
+- **React.Fragment** – Avoid extra DOM nodes.
+- **React.lazy** – Lazy load components.
+- **Code Splitting** – Reduce bundle size.
+- **Optimized Assets** – Image compression, lazy loading, responsive formats.
+
+---
+
+## Q9. What approach did you follow to fix things quicker?
+
+1. Reproduce issue and check logs.
+2. Use React/Redux DevTools to debug.
+3. Collaborate with backend using Postman/Swagger.
+4. Prioritize **hotfixes**, write **unit tests**.
+5. Maintain **modular code**, use **feature flags** or **error boundaries** for safe patching.
+
+---
+
+## Q10. TDD (Test-Driven Development)
+
+- Write **unit tests** using **Jest**, **Jasmine/Karma (Angular)**.
+- Use **Supertest** for API integration tests.
+- **Cypress** for E2E testing.
+- Aim for **80%+ coverage**, especially on edge cases.
+
+---
+
+## Q11. VISA Website You Built?
+
+[Pending answer, please clarify or add.]
+
+---
+
+## Q12. Release Support
+
+- Started as **UI Engineer**, later worked as **Scrum Master** and **Release Specialist**.
+- Handled **35+ releases** successfully.
+
+---
+
+## Q13. Merchant Support Technologies
+
+- **React.js**, **Redux**, **JavaScript**, **TypeScript**
+
+---
+
+## Q14. Code Review Practices
+
+- Enforce **naming conventions** and DRY principles.
+- Extract reusable logic into **custom hooks** (e.g., `useScreenSize`).
+- Check for **architecture standards**: containers, components, and folder structure.
+
+---
+
+## Q15. What tools do you use for state management?
+
+- Used **Redux** for predictable state management.
+  - **Redux-Saga** – Handle async workflows (preferred over older Redux Thunk).
+- Redux Concepts:
+  - **Actions** – Input events (e.g., deposit money).
+  - **Store** – Global state.
+  - **Reducers** – Business logic.
+  - **Dispatch** – Send actions.
+  - **Subscribe** – Listen to updates.
+  - **State** – Component-level data store.
+
+---
+
+## Additional Interview Questions
+
+### - Database Design?
+
+[Provide details if applicable.]
+
+### - Application Design?
+
+[Provide your approach—e.g., micro frontend, atomic design.]
+
+### - Best Practices?
+
+- Follow SOLID principles, accessibility standards, performance tuning, and modular code.
+
+### - How do you design things?
+
+- Plan reusable components, break into smaller modules, design API contracts early, consider responsiveness and maintainability.
+
+---
