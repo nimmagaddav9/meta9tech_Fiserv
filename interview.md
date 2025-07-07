@@ -155,26 +155,19 @@ This combination results in a more reliable, maintainable codebase and a smoothe
 
 ## 8. How are you managing state across complex features?
 
-# Managing State Across Complex Features
+## Managing State Across Complex Features
 
-For managing state in complex features, we use a combination of React hooks and a lightweight global state management library called **Zustand**:
+In complex applications, I manage state using a layered approach depending on the scope and complexity of the feature.
 
-- **Local State:**  
-  We utilize React's built-in hooks like `useState` and `useReducer` for managing component-level or feature-specific state. This keeps state management simple and encapsulated where possible.
+- For **local component state**, I use `useState` or `useReducer`, especially when dealing with isolated logic or form handling.
 
-- **Global State:**  
-  For application-wide or shared state, Zustand provides an intuitive and performant solution. It allows us to create centralized stores with minimal boilerplate, supports easy state updates, and integrates seamlessly with React.
+- For **shared state across multiple components**, I prefer using **Redux Toolkit** along with **RTK Query** for server state. It helps enforce a single source of truth, supports middleware for logging or persistence, and makes debugging predictable. I also use **Reselect** for memoized selectors to improve performance and avoid unnecessary re-renders.
 
-- **Type Safety:**  
-  All state slices and actions are strongly typed using TypeScript interfaces and types, ensuring consistency and catching errors during development.
+- When the features are **reactive or involve streaming data**, I use **RxJS** to handle observables, enabling clean handling of async flows and complex side effects.
 
-- **Performance Optimization:**  
-  Zustand’s selective subscription model minimizes unnecessary re-renders, improving the app’s responsiveness and efficiency.
+- I ensure that all state logic is **colocated or abstracted into custom hooks** (e.g., `useFeatureState`), so it's easier to reuse and test.
 
-- **Integration with Async Logic:**  
-  We combine Zustand with React hooks to handle asynchronous state changes, such as API calls and real-time updates, keeping the UI in sync with backend data.
-
-This hybrid approach balances simplicity and scalability, making it easier to manage complex state logic while maintaining readability and performance.
+- To avoid **prop drilling** and improve **scalability**, I use **React Context** for things like theming, user sessions, or feature flags — limited to low-frequency updates.
 
 ## 9. Can you explain how you're using Redux Toolkit and Reselect in your project?
 
@@ -227,8 +220,6 @@ This setup ensures the dashboard remains responsive and up-to-date with minimal 
 
 ## 11. What role does RxJS play in your frontend architecture?
 
-# What Role Does RxJS Play in Your Frontend Architecture?
-
 RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using Observables. In frontend architecture, RxJS plays a key role by:
 
 - **Managing Asynchronous Data Streams**  
@@ -252,8 +243,6 @@ RxJS (Reactive Extensions for JavaScript) is a library for reactive programming 
 Overall, RxJS brings a declarative, composable, and scalable approach to handling asynchronous behavior and event-driven programming in frontend apps.
 
 ## 12. How are REST APIs integrated in your application?
-
-# How Are REST APIs Integrated in Your Application?
 
 REST APIs are integrated into the frontend application to enable communication with backend services and perform CRUD operations. The typical integration approach includes:
 
