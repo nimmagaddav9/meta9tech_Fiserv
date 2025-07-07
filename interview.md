@@ -18,6 +18,39 @@ I am a core UI Developer, and my area of expertise is building .com websites usi
 
 ---
 
+## Q1. 1st Resume – Roles at United Airlines, Visa, Capital Group
+
+I am a core UI Developer with 10+ years of experience building .com websites using HTML5, CSS3, JavaScript, React.js, and Redux.
+
+### United Airlines
+
+- Worked on the **React migration team**, converting legacy .NET pages to React on **united.com**.
+- Used **ATMOS (in-house component library)** across projects.
+- Focused on account and security-related features:
+  - Forgot password, security questions, sign-in, miles pooling, dashboard updates, KTN (Known Traveler Number).
+- Implemented **accessibility features** following WCAG guidelines.
+- Used **Redux-Saga** to handle asynchronous actions like API calls and data fetching.
+- Key features: **Miles-Pooling**, TSA PreCheck, Under18 support.
+
+### Visa Inc.
+
+- Worked with the **Accelerator team** on **MBDA module remediation**:
+  - Application Management, Account Management, Portfolio Management, Analytics, Recurring Billing, Virtual Terminal.
+- Supported major banks like **Wells Fargo** and **Bank of America**.
+
+### Capital Group
+
+- Worked on the **DAVIS Project** for data visualization using **Highcharts + React**, integrated into **AEM**.
+- Built **Creative Workbench**, a writing tool used to publish articles.
+
+### Other Experience
+
+- **Cerner Corporation** – Medical exam forms.
+- **Office Depot** – Black Friday reporting dashboards.
+- **Satinos Technologies** – Tax portal and school website for **Vignan Schools**.
+
+---
+
 ## 2. What is your current project?
 
 At United Airlines, I’m working on:
@@ -458,38 +491,7 @@ This file ensures consistent compiler behavior across development teams and envi
 
 # React.js UI Developer Interview Preparation Notes
 
-## Q1. 1st Resume – Roles at United Airlines, Visa, Capital Group
 
-I am a core UI Developer with 10+ years of experience building .com websites using HTML5, CSS3, JavaScript, React.js, and Redux.
-
-### United Airlines
-
-- Worked on the **React migration team**, converting legacy .NET pages to React on **united.com**.
-- Used **ATMOS (in-house component library)** across projects.
-- Focused on account and security-related features:
-  - Forgot password, security questions, sign-in, miles pooling, dashboard updates, KTN (Known Traveler Number).
-- Implemented **accessibility features** following WCAG guidelines.
-- Used **Redux-Saga** to handle asynchronous actions like API calls and data fetching.
-- Key features: **Miles-Pooling**, TSA PreCheck, Under18 support.
-
-### Visa Inc.
-
-- Worked with the **Accelerator team** on **MBDA module remediation**:
-  - Application Management, Account Management, Portfolio Management, Analytics, Recurring Billing, Virtual Terminal.
-- Supported major banks like **Wells Fargo** and **Bank of America**.
-
-### Capital Group
-
-- Worked on the **DAVIS Project** for data visualization using **Highcharts + React**, integrated into **AEM**.
-- Built **Creative Workbench**, a writing tool used to publish articles.
-
-### Other Experience
-
-- **Cerner Corporation** – Medical exam forms.
-- **Office Depot** – Black Friday reporting dashboards.
-- **Satinos Technologies** – Tax portal and school website for **Vignan Schools**.
-
----
 
 ## Q2. Did you work on payment-related features at VISA?
 
