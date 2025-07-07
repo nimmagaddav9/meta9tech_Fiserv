@@ -420,51 +420,38 @@ A **tuple** is a fixed-length array where each element has a specific type.
 let user: [string, number] = ["John", 30];
 ```
 
-## 20\. Difference Between Interface vs Type
+## 20. Difference Between Interface vs Type
 
 Both `interface` and `type` are used to define custom types in TypeScript, but they have different strengths:
 
 ### Interface:
 
-- - Best suited for **object shapes**
--
-- - Supports **extension** (`extends`)
--
-- - Allows **declaration merging**
--
+- Best suited for **object shapes**
+- Supports **extension** (`extends`)
+- Allows **declaration merging**
 
 ### Type:
 
-- - More **flexible** than interface
--
-- - Can represent **primitives**, **unions**, **tuples**, and **intersections**
--
+- More **flexible** than interface
+- Can represent **primitives**, **unions**, **tuples**, and **intersections**
 
 ### Example:
 
-ts
+```ts
+type A = string | number; // Not possible with interface
+```
 
-CopyEdit
+Use interface for modeling objects and type when you need more flexibility with data structures.
 
-`type A = string | number; // Not possible with interface`
-
-Use `interface` for modeling objects and `type` when you need more flexibility with data structures.
-
----
-
-## 21\. What is `tsconfig.json`?
+## 21. What is `tsconfig.json`?
 
 The `tsconfig.json` file is the configuration file for a TypeScript project. It tells the TypeScript compiler how to compile the code.
 
 ### Common Fields:
 
-- - `target`: Sets the JavaScript version output (e.g., `ES6`)
--
-- - `module`: Defines module system (e.g., `CommonJS`, `ESNext`)
--
-- - `strict`: Enables strict type-checking options
--
-- - `jsx`: Enables support for JSX (for React projects)
--
+- `target`: Sets the JavaScript version output (e.g., `ES6`)
+- `module`: Defines module system (e.g., `CommonJS`, `ESNext`)
+- `strict`: Enables strict type-checking options
+- `jsx`: Enables support for JSX (for React projects)
 
 This file ensures consistent compiler behavior across development teams and environments.
