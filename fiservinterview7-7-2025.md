@@ -1,12 +1,16 @@
 Technical quesitons:
 
-1. Introduce yourself?
+# Interview Q&A
+
+### 1. Introduce yourself?
 
 Hi, I'm Vijay, a Senior Full Stack Engineer with over 12 years of experience in building scalable web applications. My core expertise lies in frontend development with React.js, TypeScript, and Redux Toolkit, and on the backend, I work extensively with Node.js, Express, and GraphQL.
 
 I've worked with cloud-native solutions on AWS, including Lambda, API Gateway, and DynamoDB, and I'm well-versed in building micro frontends and designing reusable UI libraries. I’ve also contributed to improving performance, accessibility (WCAG 2.0), and observability in production apps. Most recently, I’ve been focusing on real-time dashboards and enterprise-scale UI architecture.
 
-2. folder strructure?
+---
+
+### 2. Folder structure?
 
 I use a feature-based folder structure:
 
@@ -16,6 +20,7 @@ src/
 ├── hooks/ // reusable hooks
 ├── utils/ // helper functions
 ├── types/ // global interfaces/types
+
 Keeps the code modular and scalable.
 
 ## 3. Redux?
@@ -126,17 +131,18 @@ We use Slack/JIRA for async communication and daily standups or debug sessions t
 
 **Example:**
 
-````ts
+```ts
 let a: any = "Hello";
 a.toUpperCase(); // ✅ No error, even if 'a' was a number — risky!
 
 let b: unknown = "Hello";
 b.toUpperCase(); // ❌ Error: You must check the type first
 
-if (typeof b === 'string') {
+if (typeof b === "string") {
   b.toUpperCase(); // ✅ Safe
 }
 ```
+
 **Rule of thumb:**
 Use `unknown` when you're unsure about the type and want to enforce safety. Avoid `any` unless absolutely necessary.
 
@@ -260,7 +266,7 @@ devServer: {
   proxy: { '/api': 'http://localhost:5000' },
   headers: { 'Access-Control-Allow-Origin': '*' },
 }
-````
+```
 
 For production, CORS must be handled on the backend server.
 
