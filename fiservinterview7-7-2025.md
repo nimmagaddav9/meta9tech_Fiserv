@@ -31,6 +31,20 @@ Redux is a state management tool. I use Redux Toolkit to manage app-wide state, 
 
 ## 4. Difference Between Interface vs Type?
 
+### Q: What’s the difference between `interface` and `type` in TypeScript?
+
+**A:**
+
+| Feature               | `interface`                     | `type`                                      |
+| --------------------- | ------------------------------- | ------------------------------------------- |
+| Purpose               | Defines shape of an object      | Alias for any type (primitive, union, etc.) |
+| Extensibility         | Can be extended via `extends`   | Can be extended using intersections (`&`)   |
+| Merging               | Supports declaration merging    | Does **not** support merging                |
+| Usage with Primitives | ❌ Not for primitives or unions | ✅ Works with primitives, unions, tuples    |
+| Readability           | Preferred for object shapes     | Better for complex or computed types        |
+
+---
+
 - **interface:** Best for objects and class contracts, supports declaration merging.
 - **type:** Used for unions, primitives, tuples, and intersection types.
 
@@ -41,7 +55,7 @@ interface A {
   name: string;
 }
 type B = { age: number };
-```
+````
 
 ## 5. WCAG 2.0 guidelines?
 
