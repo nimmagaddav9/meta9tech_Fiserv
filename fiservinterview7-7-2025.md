@@ -55,7 +55,7 @@ interface A {
   name: string;
 }
 type B = { age: number };
-````
+```
 
 ## 5. WCAG 2.0 guidelines?
 
@@ -298,62 +298,27 @@ coding question:
 - "Block DESC" - [[9,3,1] , [8,5,4] ,[7,6,7]]
   \*/
 
-import React, { useState } from 'react';
+const input = [[1,9,3] , [5,4,8] ,[2,7,6]];
 
-const App: React.FC = () => {
-const originalMatrix = [
-[1, 9, 3],
-[5, 4, 8],
-[2, 7, 6],
-];
+// Sort each sub-array ascending
+const allAsc = input.map(arr => [...arr].sort((a, b) => a - b));
+console.log("ALL ASC:", allAsc);
 
-const [mode, setMode] = useState('');
-const [result, setResult] = useState<number[][]>(originalMatrix);
+// Sort each sub-array descending
+const allDesc = input.map(arr => [...arr].sort((a, b) => b - a));
+console.log("ALL DESC:", allDesc);
 
-const transformMatrix = (type: string) => {
-let newMatrix: number[][] = [];
+// Sort main array by first item ascending
+const blockAsc = [...input].sort((a, b) => a[0] - b[0]);
+console.log("BLOCK ASC:", blockAsc);
 
-    if (type === 'ALL ASC' || type === 'ALL DESC') {
-      const allNumbers = originalMatrix.flat();
-      const sorted = allNumbers.sort((a, b) => (type === 'ALL ASC' ? a - b : b - a));
-      for (let i = 0; i < 3; i++) {
-        newMatrix.push(sorted.slice(i * 3, (i + 1) * 3));
-      }
-    } else if (type === 'BLOCK ASC' || type === 'BLOCK DESC') {
-      newMatrix = originalMatrix.map((row) =>
-        [...row].sort((a, b) => (type === 'BLOCK ASC' ? a - b : b - a))
-      );
-    }
+// Sort main array by first item descending
+const blockDesc = [...input].sort((a, b) => b[0] - a[0]);
+console.log("BLOCK DESC:", blockDesc);
 
-    setMode(type);
-    setResult(newMatrix);
+Output:
 
-};
-
-return (
-
-<div style={{ padding: '20px', background: '#f3f3f3', fontFamily: 'Arial' }}>
-<h3>Original Matrix:</h3>
-<pre>{JSON.stringify(originalMatrix, null, 2)}</pre>
-
-      <div style={{ margin: '10px 0' }}>
-        {['ALL ASC', 'ALL DESC', 'BLOCK ASC', 'BLOCK DESC'].map((m) => (
-          <button key={m} onClick={() => transformMatrix(m)} style={{ marginRight: '10px' }}>
-            {m}
-          </button>
-        ))}
-      </div>
-
-      <h3>Mode: {mode}</h3>
-      <h3>Result:</h3>
-      <pre>{JSON.stringify(result, null, 2)}</pre>
-    </div>
-
-);
-};
-
-export default App;
-
-```
-
-```
+ALL ASC: [ [ 1, 3, 9 ], [ 4, 5, 8 ], [ 2, 6, 7 ] ]
+ALL DESC: [ [ 9, 3, 1 ], [ 8, 5, 4 ], [ 7, 6, 2 ] ]
+BLOCK ASC: [ [ 1, 9, 3 ], [ 2, 7, 6 ], [ 5, 4, 8 ] ]
+BLOCK DESC: [ [ 5, 4, 8 ], [ 2, 7, 6 ], [ 1, 9, 3 ] ]
